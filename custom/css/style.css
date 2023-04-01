@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("background.jpg");
+    backdrop-filter:blur(5px);
+}
+
+
+.cal-effect-body {
+    margin: auto;
+    position: relative;
+    background: black;
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    display: flex;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+}
+
+.cal-effect-body::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient( to left,tomato,transparent);
+    height: 100%;
+    width: 100%;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    animation: role 5s linear infinite;
+    -webkit-animation: role 5s linear infinite;
+}
+
+.cal-effect-body::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right,blue,transparent);
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    animation: role 5s linear infinite;
+    -webkit-animation: role 5s linear infinite;
+}
+
+
+
+
+
+
+
+
+@keyframes role {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+
+
+.cal-body {
+    background: #423f3f;
+    position:absolute;
+    inset: 5px;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+
+}
+.display {
+    background: whitesmoke;
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.btn-group {
+    display: flex;
+    margin-top:40px;
+}
+
+button {
+    background:white;
+    aspect-ratio: 2/1;
+    padding:15px 20px;
+    font-weight:bolder;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    color: white;
+    background: tomato;
+}
+button:focus {
+    color: white;
+    background: blue;
+}
+
+.cal-btn-group {
+    display: grid;
+    gap: 10px;
+    padding: 5px;
+    width: 80%;
+    grid-template-areas:"1 2 3";
+}
+
+.cal-btn-group-2 {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 10px;
+    padding: 5px;
+}
